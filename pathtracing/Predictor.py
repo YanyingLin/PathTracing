@@ -32,7 +32,7 @@ class Predictor(object):
         self.model = model
         self.model.eval()
 
-    def translate_batch(self, src_seq, src_pos):
+    def preds(self, src_seq, src_pos):
         def get_inst_idx_to_tensor_position_map(inst_idx_list):
             return {inst_idx: tensor_position for tensor_position, inst_idx in enumerate(inst_idx_list)}
 
